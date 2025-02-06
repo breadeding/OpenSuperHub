@@ -1171,7 +1171,9 @@ namespace OmenSuperHub {
         }
       }
 
-      libreTempCPU = tempArray.Average();
+      if (tempArray.Count > 0) {
+        libreTempCPU = tempArray.Average();
+      }
 
       if (openLib && libreTempCPU > -299 && librePowerCPU >= 0) {
         openLib = false;
